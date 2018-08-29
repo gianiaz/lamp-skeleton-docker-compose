@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  php:
+    container_name: spese
+    image: php-7.2-alpine
+    build:
+      context: docker/php
+    environment:
+      XDEBUG_CONFIG: "remote_host=192.168.1.244 remote_port=9090"
+      PHP_IDE_CONFIG: "serverName=spese"
